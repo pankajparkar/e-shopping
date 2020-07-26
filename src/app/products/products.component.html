@@ -1,5 +1,5 @@
 <div class="products-container">
   <div *ngFor="let product of products" class="product-container">
-    <product [product]="product"></product>
+    <product [product]="product" [addedToCart]="itemExist(product.id)"></product>
   </div>
 </div>

@@ -7,7 +7,8 @@ import { CartItem } from '../models/cart-item';
 })
 export class ShoppingCartService {
 
-  cartItems = new BehaviorSubject<CartItem[]>([]);
+  private cartItems = new BehaviorSubject<CartItem[]>([]);
+  private cartItemsCount = new BehaviorSubject<number>(0);
 
   constructor() { }
 
@@ -15,8 +16,27 @@ export class ShoppingCartService {
     return this.cartItems.asObservable();
   }
 
-  addCartItem(item) {
-    this.cartItems.next(item);
+  getCartItemsCount() {
+    return this.cartItemsCount.asObservable();
+  }
+
+  addCartItem(item: CartItem) {
+    const collection = this.cartItems.getValue();
+    item.quantity = 1;
+    collection.push(item);
+    this.cartItems.next(collection);
+    this.cartItemsCount.next(collection.length);
+  }
+
+  removeCartItem(item) {
+    let collection = this.cartItems.getValue();
+    collection = collection.filter(i => i.id !== item.id);
+    this.cartItems.next(collection);
+    this.cartItemsCount.next(collection.length);
+  }
+
+  setCartItemsCount(count: number) {
+    this.cartItemsCount.next(count);
   }
 
 }

@@ -5,4 +5,5 @@ export interface Product {
   imgUrl: string;
   description: string;
   price: number;
+  addedToCart?: boolean;
 }
