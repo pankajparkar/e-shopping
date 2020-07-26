@@ -1,0 +1,4 @@
+<header-bar></header-bar>
+<shopping-cart-icon (click)="openShoppingCart()"></shopping-cart-icon>
+<products *ngIf="!isShoppingCartVisible"></products>
+<shopping-cart *ngIf="isShoppingCartVisible"></shopping-cart>

@@ -1,0 +1,16 @@
+:host {
+  font-size: 1.45em;
+  font-family: 'Muli', Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  background-color: #282b2e;
+}
+
+.header-title {
+  color: #ffffff;
+}
