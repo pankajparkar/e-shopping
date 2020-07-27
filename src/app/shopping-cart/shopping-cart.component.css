@@ -1,0 +1,172 @@
+.product-row {
+    height: 150px;
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ff4500;
+}
+
+.product-row > div {
+    margin: 10px;
+}
+
+.product-row .title {
+    height: 40px;
+}
+
+.product-row .value {
+    height: 90px;
+}
+
+.product-row .product-desc .value {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    height: unset;
+}
+
+.product-row .product-image {
+    flex: 1 1 200px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.product-row .product-name {
+    flex: 1 1 300px;
+    max-width: 300px;
+}
+
+.product-row .product-desc {
+    flex: 1 1 500px;
+    max-width: 500px;
+}
+
+.product-row .product-quantity {
+    flex: 1 1 100px;
+    max-width: 100px;
+}
+
+.product-row .product-price {
+    flex: 1 1 200px;
+    max-width: 200px;
+}
+
+.product-row .product-total-price {
+    flex: 1 1 200px;
+    max-width: 200px;
+}
+
+.product-row .product-action {
+    flex: 1 1 200px;
+    max-width: 200px;
+}
+
+.product-row .product-action button.remove-item {
+    box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product-row .product-action button.remove-item:hover {
+    background-color: #eeeeee;
+}
+
+.product-row .product-action button.remove-item:active {
+    background-color: #eeeeee;
+    transform: translateY(1px);
+}
+
+.product-row .product-image img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.total-amount-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+.total-amount-wrapper .title {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    .product-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 500px;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ff4500;
+    }
+
+    .product-row > div {
+        margin: 10px;
+        width: 100%;
+    }
+
+    .product-row .title {
+        margin: 0 20px;
+        height: auto;
+        width: 40%;
+    }
+
+    .product-row .value {
+        margin: 0 20px;
+        height: auto;
+        width: 60%;
+    }
+
+    .product-row .product-image {
+        flex: 1 1 100px;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .product-row .product-name {
+        display: flex;
+        max-width: unset;
+    }
+
+    .product-row .product-desc {
+        display: flex;
+        max-width: unset;
+    }
+
+    .product-row .product-desc .value {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        height: 37px;
+    }
+    .product-row .product-quantity {
+        display: flex;
+        max-width: unset;
+    }
+
+    .product-row .product-price {
+        display: flex;
+        max-width: unset;
+    }
+
+    .product-row .product-total-price {
+        display: flex;
+        max-width: unset;
+    }
+
+    .product-row .product-action {
+        display: flex;
+        max-width: unset;
+        justify-content: center;
+    }
+
+    .product-row .product-action .title {
+        display: none;
+    }
+
+    .product-row .product-action .value {
+        text-align: center;
+    }
+}

@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
 import {Product} from '../../models/product';
 import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 import { CartItem } from 'src/app/models/cart-item';
@@ -6,7 +6,8 @@ import { CartItem } from 'src/app/models/cart-item';
 @Component({
   selector: 'product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  styleUrls: ['./product.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductComponent {
 

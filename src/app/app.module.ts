@@ -9,6 +9,7 @@ import {ProductComponent} from './products/product/product.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShoppingCartIconComponent } from './shopping-cart-icon/shopping-cart-icon.component';
+import { ShoppingCartItemComponent } from './shopping-cart/shopping-cart-item/shopping-cart-item.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ShoppingCartIconComponent } from './shopping-cart-icon/shopping-cart-ic
     ProductsComponent,
     ProductComponent,
     ShoppingCartComponent,
-    ShoppingCartIconComponent
+    ShoppingCartIconComponent,
+    ShoppingCartItemComponent
   ],
   imports: [
     BrowserModule,
