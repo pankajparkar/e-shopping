@@ -6,6 +6,8 @@
   <figcaption>
     <h3>{{product.name}}</h3>
     <p>{{product.description}}</p>
-    <a *ngIf="!addedToCart" (click)="addToCart(product)">Add to Cart</a>
+    <a [ngClass]="{ 'disabled': addedToCart }" (click)="!addedToCart && addToCart(product)">
+      {{ addedToCart ? 'Added': 'Add' }} to Cart
+    </a>
   </figcaption>
 </figure>
