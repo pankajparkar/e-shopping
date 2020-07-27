@@ -1,7 +1,7 @@
 <figure class="product blue">
   <div>
     <img [src]="product.imgUrl" [alt]="product.name"/>
-    <div class="price">125.25$</div>
+    <div class="price">{{product.price | currency: 'USD'}}</div>
   </div>
   <figcaption>
     <h3>{{product.name}}</h3>

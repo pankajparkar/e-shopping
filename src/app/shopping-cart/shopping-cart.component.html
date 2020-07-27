@@ -24,12 +24,16 @@
                 <div class="cart-item-price">
                     <div class="title">Price per 1pc</div>
                     <!-- TODO: Use currency pipe -->
-                    <div class="value">{{cartItem.price}}</div>
+                    <div class="value">
+                        {{cartItem.price | currency}}
+                    </div>
                 </div>
                 <div class="cart-item-total-price">
                     <div class="title">Line total</div>
                     <!-- TODO: Use currency pipe -->
-                    <div class="value">{{ cartItem.total }}$</div>
+                    <div class="value">
+                        {{ cartItem.total | currency }}
+                    </div>
                 </div>
                 <div class="cart-item-action">
                     <div class="title"></div>
@@ -44,7 +48,7 @@
         <div class="total-amount-wrapper">
             <div class="total-amount-section">
                 <div class="title">Total amount for payment:</div>
-                <div class="value">{{ getTotal(cartItems) }}</div>
+                <div class="value">{{ getTotal(cartItems) | currency }}</div>
             </div>
         </div>
     </ng-container>
