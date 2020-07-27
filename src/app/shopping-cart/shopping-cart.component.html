@@ -1,37 +1,37 @@
 <div class="shopping-cart-container">
     <ng-container *ngIf="cartItems$ | async as cartItems">
         <div *ngFor="let cartItem of cartItems">
-            <div class="product-row">
-                <div class="product-image">
+            <div class="cart-item-row">
+                <div class="cart-item-image">
                     <img [src]="cartItem.imgUrl" [alt]="cartItem.name" />
                 </div>
-                <div class="product-name">
+                <div class="cart-item-name">
                     <div class="title">Product Name</div>
                     <div class="value">{{cartItem.name}}</div>
                 </div>
-                <div class="product-desc">
+                <div class="cart-item-desc">
                     <div class="title">Short Description</div>
                     <div class="value" [title]="cartItem.description">
                         {{cartItem.description}}
                     </div>
                 </div>
-                <div class="product-quantity">
+                <div class="cart-item-quantity">
                     <div class="title">Qty</div>
                     <div class="value">
                         {{cartItem.quantity}}
                     </div>
                 </div>
-                <div class="product-price">
+                <div class="cart-item-price">
                     <div class="title">Price per 1pc</div>
                     <!-- TODO: Use currency pipe -->
                     <div class="value">{{cartItem.price}}</div>
                 </div>
-                <div class="product-total-price">
+                <div class="cart-item-total-price">
                     <div class="title">Line total</div>
                     <!-- TODO: Use currency pipe -->
                     <div class="value">{{ cartItem.total }}$</div>
                 </div>
-                <div class="product-action">
+                <div class="cart-item-action">
                     <div class="title"></div>
                     <div class="value">
                         <button type="button" class="remove-item" (click)="updateCart(cartItem, 'removeAll')">

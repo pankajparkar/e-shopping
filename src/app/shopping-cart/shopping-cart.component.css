@@ -1,4 +1,4 @@
-.product-row {
+.cart-item-row {
     height: 150px;
     display: flex;
     margin: 20px;
@@ -6,19 +6,19 @@
     border: 1px solid #ff4500;
 }
 
-.product-row > div {
+.cart-item-row > div {
     margin: 10px;
 }
 
-.product-row .title {
+.cart-item-row .title {
     height: 40px;
 }
 
-.product-row .value {
+.cart-item-row .value {
     height: 90px;
 }
 
-.product-row .product-desc .value {
+.cart-item-row .cart-item-desc .value {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -26,56 +26,56 @@
     height: unset;
 }
 
-.product-row .product-image {
+.cart-item-row .cart-item-image {
     flex: 1 1 200px;
     max-width: 200px;
     max-height: 200px;
 }
 
-.product-row .product-name {
+.cart-item-row .cart-item-name {
     flex: 1 1 300px;
     max-width: 300px;
 }
 
-.product-row .product-desc {
+.cart-item-row .cart-item-desc {
     flex: 1 1 500px;
     max-width: 500px;
 }
 
-.product-row .product-quantity {
+.cart-item-row .cart-item-quantity {
     flex: 1 1 100px;
     max-width: 100px;
 }
 
-.product-row .product-price {
+.cart-item-row .cart-item-price {
     flex: 1 1 200px;
     max-width: 200px;
 }
 
-.product-row .product-total-price {
+.cart-item-row .cart-item-total-price {
     flex: 1 1 200px;
     max-width: 200px;
 }
 
-.product-row .product-action {
+.cart-item-row .cart-item-action {
     flex: 1 1 200px;
     max-width: 200px;
 }
 
-.product-row .product-action button.remove-item {
+.cart-item-row .cart-item-action button.remove-item {
     box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.product-row .product-action button.remove-item:hover {
+.cart-item-row .cart-item-action button.remove-item:hover {
     background-color: #eeeeee;
 }
 
-.product-row .product-action button.remove-item:active {
+.cart-item-row .cart-item-action button.remove-item:active {
     background-color: #eeeeee;
     transform: translateY(1px);
 }
 
-.product-row .product-image img {
+.cart-item-row .cart-item-image img {
     max-height: 100%;
     max-width: 100%;
 }
@@ -91,7 +91,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .product-row {
+    .cart-item-row {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -101,72 +101,72 @@
         border: 1px solid #ff4500;
     }
 
-    .product-row > div {
+    .cart-item-row > div {
         margin: 10px;
         width: 100%;
     }
 
-    .product-row .title {
+    .cart-item-row .title {
         margin: 0 20px;
         height: auto;
         width: 40%;
     }
 
-    .product-row .value {
+    .cart-item-row .value {
         margin: 0 20px;
         height: auto;
         width: 60%;
     }
 
-    .product-row .product-image {
+    .cart-item-row .cart-item-image {
         flex: 1 1 100px;
         max-width: 100px;
         max-height: 100px;
     }
 
-    .product-row .product-name {
+    .cart-item-row .cart-item-name {
         display: flex;
         max-width: unset;
     }
 
-    .product-row .product-desc {
+    .cart-item-row .cart-item-desc {
         display: flex;
         max-width: unset;
     }
 
-    .product-row .product-desc .value {
+    .cart-item-row .cart-item-desc .value {
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         overflow: hidden;
         height: 37px;
     }
-    .product-row .product-quantity {
+    .cart-item-row .cart-item-quantity {
         display: flex;
         max-width: unset;
     }
 
-    .product-row .product-price {
+    .cart-item-row .cart-item-price {
         display: flex;
         max-width: unset;
     }
 
-    .product-row .product-total-price {
+    .cart-item-row .cart-item-total-price {
         display: flex;
         max-width: unset;
     }
 
-    .product-row .product-action {
+    .cart-item-row .cart-item-action {
         display: flex;
         max-width: unset;
         justify-content: center;
     }
 
-    .product-row .product-action .title {
+    .cart-item-row .cart-item-action .title {
         display: none;
     }
 
-    .product-row .product-action .value {
+    .cart-item-row .cart-item-action .value {
         text-align: center;
     }
 }
