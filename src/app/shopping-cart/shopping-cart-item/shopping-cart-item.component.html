@@ -1,1 +1,41 @@
-<p>shopping-cart-item works!</p>
+<div class="cart-item-row">
+    <div class="cart-item-image">
+        <img [src]="cartItem.imgUrl" [alt]="cartItem.name" />
+    </div>
+    <div class="cart-item-name">
+        <div class="title">Product Name</div>
+        <div class="value">{{cartItem.name}}</div>
+    </div>
+    <div class="cart-item-desc">
+        <div class="title">Short Description</div>
+        <div class="value" [title]="cartItem.description">
+            {{cartItem.description}}
+        </div>
+    </div>
+    <div class="cart-item-quantity">
+        <div class="title">Qty</div>
+        <div class="value">
+            {{cartItem.quantity}}
+        </div>
+    </div>
+    <div class="cart-item-price">
+        <div class="title">Price per 1pc</div>
+        <div class="value">
+            {{cartItem.price | currency}}
+        </div>
+    </div>
+    <div class="cart-item-total-price">
+        <div class="title">Line total</div>
+        <div class="value">
+            {{ cartItem.total | currency }}
+        </div>
+    </div>
+    <div class="cart-item-action">
+        <div class="title"></div>
+        <div class="value">
+            <button type="button" class="remove-item" (click)="updateCart(cartItem, 'removeAll')">
+                Remove Item
+            </button>
+        </div>
+    </div>
+</div>
