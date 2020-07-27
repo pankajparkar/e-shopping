@@ -14,6 +14,10 @@ export class ShoppingCartComponent implements OnInit {
     private shoppingCartService: ShoppingCartService
   ) { }
 
+  getTotal(items) {
+    return items.reduce((a, b) => a + b.total, 0);
+  }
+
   ngOnInit() {
     this.cartItems$ = this.shoppingCartService.getCartItems();
   }
