@@ -19,7 +19,7 @@ export class CartItem implements Product {
     this.quantity = props.quantity;
   }
 
-  private get total() {
+  get total() {
     return this.price ? (this.price * this.quantity): 0; 
   }
 }
