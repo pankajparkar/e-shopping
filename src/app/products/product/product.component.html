@@ -7,7 +7,8 @@
     <h3>{{product.name}}</h3>
     <p>{{product.description}}</p>
     <a (click)="addToCart(product)">
-      {{ addedToCart ? 'Added': 'Add' }} to Cart
+      Add to Cart
+      <span *ngIf="cartItem">({{ cartItem.quantity }})</span>
     </a>
   </figcaption>
 </figure>

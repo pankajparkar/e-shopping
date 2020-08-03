@@ -12,7 +12,7 @@ import { CartItem } from 'src/app/models/cart-item';
 export class ProductComponent {
 
   @Input() product: Product;
-  @Input() addedToCart: boolean = false;
+  @Input() cartItem: CartItem;
 
   constructor(
     private shoppingCartService: ShoppingCartService,

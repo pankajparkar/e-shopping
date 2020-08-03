@@ -28,8 +28,8 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.subscriptions.push(cartItemsSubscription);
   }
 
-  itemExist(id: number) {
-    return !!(this.cardItems.length && this.cardItems.find(c => c.id === id));
+  getCartItem(id: number): CartItem | null {
+    return this.cardItems.length && this.cardItems.find(c => c.id === id);
   }
 
   getProducts() {
