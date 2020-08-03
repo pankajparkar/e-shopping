@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "npm run build && cp dist/fe-coding-assignment/index.html dist/fe-coding-assignment/404.html && npx gh-pages -d dist/fe-coding-assignment"
+    "deploy-manual": "npm run build && cp dist/fe-coding-assignment/index.html dist/fe-coding-assignment/404.html && npx gh-pages -d dist/fe-coding-assignment",
+    "deploy-auto": "ng deploy --c=production --base-href /e-shopping/"
   },
   "private": true,
   "dependencies": {
