@@ -1,13 +1,14 @@
 {
   "name": "fe-coding-assignment",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
+    "start": "ng serve --base-href /e-shopping/",
+    "build": "ng build --prod --base-href /e-shopping/",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "npm run build && cp dist/fe-coding-assignment/index.html dist/fe-coding-assignment/404.html && npx gh-pages -d dist/fe-coding-assignment"
   },
   "private": true,
   "dependencies": {
