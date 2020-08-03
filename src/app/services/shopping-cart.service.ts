@@ -22,8 +22,13 @@ export class ShoppingCartService {
 
   addCartItem(item: CartItem) {
     const collection = this.cartItems.getValue();
-    item.quantity = 1;
-    collection.push(item);
+    const currentItem = collection.find(c => c.id === item.id);
+    if (currentItem) {
+      ++currentItem.quantity;
+    } else {
+      item.quantity = 1;
+      collection.push(item);
+    }
     this.cartItems.next(collection);
     this.cartItemsCount.next(collection.length);
   }

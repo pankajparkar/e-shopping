@@ -5,11 +5,14 @@
                 [cartItem]="cartItem">
             </shopping-cart-item>
         </ng-container>
-        <div class="total-amount-wrapper">
+        <div class="total-amount-wrapper" *ngIf="cartItems.length">
             <div class="total-amount-section">
                 <div class="title">Total amount for payment:</div>
                 <div class="value">{{ getTotal(cartItems) | currency }}</div>
             </div>
+        </div>
+        <div class="no-cart-items" *ngIf="!cartItems.length">
+            No item(s) in the cart
         </div>
     </ng-container>
 </div>

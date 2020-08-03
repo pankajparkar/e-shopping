@@ -1,5 +1,13 @@
-.total-amount-wrapper .title {
-    text-decoration: underline;
+.total-amount-section {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 30px;
+}
+
+.no-cart-items {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ff4500;
 }
 
 @media only screen and (max-width: 768px) {

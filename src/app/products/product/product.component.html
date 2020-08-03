@@ -6,7 +6,7 @@
   <figcaption>
     <h3>{{product.name}}</h3>
     <p>{{product.description}}</p>
-    <a [ngClass]="{ 'disabled': addedToCart }" (click)="!addedToCart && addToCart(product)">
+    <a (click)="addToCart(product)">
       {{ addedToCart ? 'Added': 'Add' }} to Cart
     </a>
   </figcaption>
