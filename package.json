@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --base-href /e-shopping/",
-    "build": "ng build --c=production --base-href /e-shopping/",
+    "build": "ng build --aot=true --c=production --base-href /e-shopping/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
