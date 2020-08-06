@@ -22,7 +22,7 @@ figure.product * {
 }
 
 figure.product img {
-  max-width: 100%;
+  width: 100%;
   vertical-align: top;
   max-height: 200px;
 }
